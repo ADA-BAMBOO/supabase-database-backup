@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict tXTCrfjJWWDiTgwwzPGonChw9pCd3OjQGzbPvyNDpJjjMu4Ngi4W6adiGx084ga
+-- \restrict cUklncs2bjAMb9VLmgvgzq9Ylc4epq31UwtTgitIn5nENyOSFobh2zUhGcF53Uk
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -239,6 +239,7 @@ COPY "public"."n8n_chat_histories" ("id", "session_id", "message", "created_at")
 35	1910	{"type": "human", "content": "<p>Bên bạn có tối ưu SEO kỹ thuật hay chỉ build giao diện?</p>\\n", "additional_kwargs": {}, "response_metadata": {}}	2026-04-09 02:38:45.237547+00
 36	1910	{"type": "ai", "content": "Dạ bên em không chỉ làm giao diện đâu ạ, phần Technical SEO sẽ được tối ưu sẵn ngay từ lúc code web luôn. \\n\\nCác yếu tố như tốc độ tải trang, cấu trúc URL, thẻ meta hay sitemap đều được setup chuẩn chỉnh để Google dễ dàng đọc hiểu website của mình. \\n\\nViệc này giúp anh/chị có một nền tảng kỹ thuật vững chắc để sau này đẩy SEO lên top thuận lợi hơn rất nhiều ạ. \\n\\nKhông biết hiện tại anh/chị đã có đội ngũ SEO/content riêng chưa, hay mình dự định sẽ tự triển khai ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-09 02:38:45.402049+00
 37	17	{"type": "human", "content": "Tôi sợ chatbot trả lời sai thông tin → mất khách. Bạn kiểm soát việc này thế nào?", "additional_kwargs": {}, "response_metadata": {}}	2026-04-09 02:38:52.064174+00
+56	17	{"type": "ai", "content": "Dạ em nghe anh Cường ơi. \\n\\nAnh đang băn khoăn thêm phần nào về Chatbot, hay muốn em tư vấn sâu hơn về giải pháp nào khác không ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-09 07:34:04.959931+00
 38	17	{"type": "ai", "content": "Dạ nhiều anh/chị lúc mới dùng cũng lo lắng giống anh Cường về vấn đề này. Bên em sẽ thiết lập giới hạn để bot CHỈ được phép trả lời dựa trên tài liệu chuẩn của công ty mình, nếu khách hỏi câu quá khó bot sẽ tự động chuyển sang cho nhân viên thật xử lý. \\n\\nHằng tháng bên em cũng sẽ theo dõi lịch sử chat và tinh chỉnh lại bot liên tục nên anh hoàn toàn yên tâm nha. Hiện tại bảng giá và thông tin dịch vụ bên mình đang lưu ở dạng file Word, PDF hay trên Website vậy anh?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-09 02:38:52.228272+00
 39	1911	{"type": "human", "content": "<p>xin chào</p>\\n", "additional_kwargs": {}, "response_metadata": {}}	2026-04-09 02:50:07.84379+00
 40	1911	{"type": "ai", "content": "Dạ em chào anh/chị, em là chuyên viên tư vấn của BBOTech - \\"Phòng IT Online\\" cho doanh nghiệp đây ạ. \\n\\nKhông biết hiện tại bên mình đang cần hỗ trợ tối ưu quy trình hay tìm kiếm giải pháp công nghệ nào không anh/chị nhỉ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-09 02:50:08.011236+00
@@ -252,6 +253,11 @@ COPY "public"."n8n_chat_histories" ("id", "session_id", "message", "created_at")
 48	1911	{"type": "ai", "content": "Dạ bên em không có bảng giá cố định, vì tụi em tính phí sát theo đúng nhu cầu thực tế của mình để tránh lãng phí ạ. Chi phí sẽ gồm phần setup ban đầu và một khoản duy trì vận hành hằng tháng (bên em lo trọn gói server, bảo trì, xử lý lỗi kỹ thuật). \\n\\nĐể tiện tính toán và lên báo giá chuẩn xác nhất, anh/chị cho em xin số Zalo để em gọi trao đổi nhanh tầm 5 phút nhé?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-09 02:51:57.561219+00
 49	17	{"type": "human", "content": "còn dịch vụ gì", "additional_kwargs": {}, "response_metadata": {}}	2026-04-09 06:48:20.238067+00
 50	17	{"type": "ai", "content": "Dạ ngoài Chatbot, bên em còn triển khai Website, hệ thống Email Marketing và tự động hóa quy trình (AI Automation) ạ. Tuy nhiên để không làm mất thời gian với một danh sách dài, em muốn tập trung vào đúng giải pháp giải quyết được khó khăn thực tế của bên mình. \\n\\nNgoài khâu tư vấn khách hàng, anh Cường có đang thấy quy trình nội bộ nào khác bị tốn quá nhiều thời gian làm thủ công không ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-09 06:48:20.405421+00
+51	1910	{"type": "human", "content": "<p>BBOTech là bên làm gì vậy em, nói dễ hiểu giúp chị được không?</p>\\n", "additional_kwargs": {}, "response_metadata": {}}	2026-04-09 07:29:42.673805+00
+52	1910	{"type": "ai", "content": "Dạ nói một cách dễ hiểu nhất thì chị cứ hình dung BBOTech giống như một \\"Phòng IT Online\\" của doanh nghiệp mình vậy đó ạ. \\n\\nBên em không làm kiểu giao sản phẩm xong rồi thôi, mà sẽ lo trọn gói từ khâu thiết lập, vận hành đến bảo trì hệ thống lâu dài để chị không phải nhức đầu về kỹ thuật. \\n\\nMục tiêu là để chị chỉ việc tập trung vào kinh doanh, còn phần nền tảng công nghệ thì cứ để BBOTech gánh vác trọn vẹn. \\n\\nKhông biết hiện tại khâu nào trong quy trình làm việc đang làm chị thấy mất thời gian và cần tối ưu nhất ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-09 07:29:42.842698+00
+53	1910	{"type": "human", "content": "<p>Bên em giúp doanh nghiệp theo kiểu nào, là bán phần mềm hay là làm dịch vụ?</p>\\n", "additional_kwargs": {}, "response_metadata": {}}	2026-04-09 07:30:18.702157+00
+54	1910	{"type": "ai", "content": "Dạ bên em không bán phần mềm kiểu bắt khách tự mài mò, cũng không làm dịch vụ kiểu \\"bàn giao xong rồi mất hút\\" như nhiều agency khác đâu chị. \\n\\nBBOTech triển khai trọn gói giống như một đội IT nội bộ của riêng chị vậy: từ lúc thiết lập hệ thống đến khâu vận hành và bảo trì lâu dài luôn. \\n\\nPhần kỹ thuật khó nhằn bên em sẽ gánh vác hết, để doanh nghiệp mình chỉ việc yên tâm tập trung vào mảng kinh doanh thôi ạ. \\n\\nChị có muốn em tư vấn thử một giải pháp thực tế để xem bên em áp dụng cho doanh nghiệp mình như thế nào cho dễ hình dung không ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-09 07:30:18.866432+00
+55	17	{"type": "human", "content": "ê", "additional_kwargs": {}, "response_metadata": {}}	2026-04-09 07:34:04.795561+00
 \.
 
 
@@ -330,7 +336,7 @@ SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 1, false);
 -- Name: n8n_chat_histories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 50, true);
+SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 56, true);
 
 
 --
@@ -344,6 +350,6 @@ SELECT pg_catalog.setval('"supabase_functions"."hooks_id_seq"', 1, false);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict tXTCrfjJWWDiTgwwzPGonChw9pCd3OjQGzbPvyNDpJjjMu4Ngi4W6adiGx084ga
+-- \unrestrict cUklncs2bjAMb9VLmgvgzq9Ylc4epq31UwtTgitIn5nENyOSFobh2zUhGcF53Uk
 
 RESET ALL;
