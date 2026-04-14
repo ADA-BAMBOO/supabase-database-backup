@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict TBClVsZqW0vC2IALRObGk8542pjZq5V7zVi3c4ml2uhmpiLMQgFQa2TFfGnT6eQ
+-- \restrict fONebTGhV1zpMRdd1SSLOZtqJmrj8IGbrQcbpwpjVOgNvRVPSe5WrFmeWdExG7g
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -194,6 +194,86 @@ COPY "auth"."webauthn_challenges" ("id", "user_id", "challenge_type", "session_d
 --
 
 COPY "auth"."webauthn_credentials" ("id", "user_id", "credential_id", "public_key", "attestation_type", "aaguid", "sign_count", "transports", "backup_eligible", "backed_up", "friendly_name", "created_at", "updated_at", "last_used_at") FROM stdin;
+\.
+
+
+--
+-- Data for Name: tenants; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "public"."tenants" ("id", "name", "status", "pinecone_namespace", "settings_json", "created_at", "updated_at") FROM stdin;
+\.
+
+
+--
+-- Data for Name: contacts; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "public"."contacts" ("id", "tenant_id", "name", "phone", "email", "company", "source_system", "external_contact_id", "created_at", "updated_at") FROM stdin;
+\.
+
+
+--
+-- Data for Name: contact_identities; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "public"."contact_identities" ("id", "tenant_id", "contact_id", "channel", "external_user_id", "external_conversation_id", "created_at", "updated_at") FROM stdin;
+\.
+
+
+--
+-- Data for Name: conversations; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "public"."conversations" ("id", "tenant_id", "contact_id", "channel", "chatwoot_conversation_id", "status", "last_message_at", "created_at", "updated_at") FROM stdin;
+\.
+
+
+--
+-- Data for Name: conversation_states; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "public"."conversation_states" ("conversation_id", "tenant_id", "current_branch", "current_stage", "ai_mode", "lead_status", "missing_fields_json", "collected_fields_json", "last_confidence", "spam_score", "last_reply_hash", "updated_at", "last_input_at", "last_message_at") FROM stdin;
+\.
+
+
+--
+-- Data for Name: conversation_summaries; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "public"."conversation_summaries" ("id", "tenant_id", "conversation_id", "summary_text", "turn_count", "created_at") FROM stdin;
+\.
+
+
+--
+-- Data for Name: customer_memory; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "public"."customer_memory" ("id", "tenant_id", "contact_id", "key", "value_json", "confidence", "updated_at", "created_at") FROM stdin;
+\.
+
+
+--
+-- Data for Name: lead_records; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "public"."lead_records" ("id", "tenant_id", "contact_id", "conversation_id", "service_interest", "lead_score", "status", "notes", "created_at", "updated_at") FROM stdin;
+\.
+
+
+--
+-- Data for Name: message_buffer; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "public"."message_buffer" ("id", "tenant_id", "conversation_id", "message_id", "content", "content_normalized", "message_hash", "processed", "created_at", "processed_at") FROM stdin;
+\.
+
+
+--
+-- Data for Name: messages; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "public"."messages" ("id", "tenant_id", "conversation_id", "message_source_id", "role", "content", "content_normalized", "message_hash", "raw_payload", "created_at") FROM stdin;
 \.
 
 
@@ -468,6 +548,42 @@ COPY "public"."n8n_chat_histories" ("id", "session_id", "message", "created_at")
 263	1915	{"type": "human", "content": "<p>Chàoooo cậu</p>\\n", "additional_kwargs": {}, "response_metadata": {}}	2026-04-10 10:15:05.316205+00
 265	1915	{"type": "human", "content": "<p>😀</p>\\n", "additional_kwargs": {}, "response_metadata": {}}	2026-04-10 10:15:16.231093+00
 266	1915	{"type": "ai", "content": "Dạ anh/chị cười tươi quá nè ^^ Hiện tại doanh nghiệp bên mình đang hoạt động trong lĩnh vực nào vậy ạ? Để em xem thử bên em có thể hỗ trợ tối ưu được khâu nào cho mình không nha.", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-10 10:15:16.394693+00
+267	1916	{"type": "human", "content": "<p>Chào</p>\\n", "additional_kwargs": {}, "response_metadata": {}}	2026-04-13 04:16:48.337509+00
+268	1916	{"type": "ai", "content": "Dạ em chào anh/chị, em là chuyên viên tư vấn của BBOTech đây ạ. \\n\\nHiện tại doanh nghiệp mình đang gặp khó khăn gì về vận hành hay cần setup hệ thống nào, anh/chị cứ chia sẻ để em hỗ trợ nhé?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-13 04:16:48.509077+00
+269	1916	{"type": "human", "content": "<p>Chào</p>\\n", "additional_kwargs": {}, "response_metadata": {}}	2026-04-13 04:16:54.990597+00
+270	1916	{"type": "ai", "content": "Dạ chào anh/chị ạ. Anh/chị đang quan tâm đến mảng nào bên em hay đang cần tìm giải pháp gì cho doanh nghiệp mình ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-13 04:16:55.158366+00
+271	1917	{"type": "human", "content": "<p>Hallo</p>\\n", "additional_kwargs": {}, "response_metadata": {}}	2026-04-13 04:17:34.357996+00
+272	1917	{"type": "ai", "content": "Dạ em chào anh/chị, em là chuyên viên tư vấn của BBOTech — \\"Phòng IT Online\\" chuyên đồng hành cùng các doanh nghiệp SME đây ạ. \\n\\nBên em chuyên lo từ A-Z phần setup, vận hành và bảo trì hệ thống công nghệ để anh/chị rảnh tay hoàn toàn tập trung vào việc kinh doanh. \\n\\nKhông biết hiện tại doanh nghiệp mình đang gặp khó khăn gì trong quá trình vận hành hay cần tìm giải pháp nào để em hỗ trợ tư vấn ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-13 04:17:34.531326+00
+273	26842848072043208	{"type": "human", "content": "helo", "additional_kwargs": {}, "response_metadata": {}}	2026-04-13 08:43:39.200315+00
+274	26842848072043208	{"type": "ai", "content": "Dạ em đây ạ ^^. Hồi nãy anh/chị có bảo muốn trao đổi trực tiếp với người thật cho tiện đó. Anh/chị cho em xin số điện thoại Zalo của mình, để chuyên viên bên em gọi qua hỗ trợ đúng bài toán của bên mình luôn nha?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-13 08:43:39.372393+00
+275	26842848072043208	{"type": "human", "content": "Chat", "additional_kwargs": {}, "response_metadata": {}}	2026-04-13 08:51:08.798148+00
+276	26842848072043208	{"type": "ai", "content": "Dạ vâng ạ, vậy mình cứ nhắn tin trao đổi qua đây cho thoải mái nha. Hồi nãy anh/chị đang quan tâm đến mảng Chatbot AI. Hiện tại bên mình đang kinh doanh sản phẩm hay dịch vụ gì, để em xem thử kịch bản chatbot nào hợp nhất với mình ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-13 08:51:08.962644+00
+277	1cfed1577ff0484eacda010a20edeff7	{"type": "human", "content": "xiin chaof", "additional_kwargs": {}, "response_metadata": {}}	2026-04-13 10:44:11.740152+00
+278	1cfed1577ff0484eacda010a20edeff7	{"type": "ai", "content": "Dạ em chào anh/chị, em là chuyên viên tư vấn của BBOTech ạ. Chào mừng anh/chị đến với \\"Phòng IT Online\\" chuyên đồng hành cùng các doanh nghiệp SME. Không biết hiện tại bên mình đang cần hỗ trợ mảng công nghệ hay tối ưu vận hành nào để em tư vấn cho sát nhu cầu ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-13 10:44:11.923995+00
+279	24899494746392395	{"type": "human", "content": "Abs", "additional_kwargs": {}, "response_metadata": {}}	2026-04-13 10:47:58.053613+00
+280	24899494746392395	{"type": "ai", "content": "Dạ em thấy chữ \\"Abs\\" của mình rồi, chắc anh/chị lỡ tay gõ nhầm hoặc đang test bàn phím đúng không ạ? 😂 \\n\\nHoặc nếu đây là tên hệ thống hay nghiệp vụ nào đó mình đang quan tâm thì anh/chị cứ nói rõ hơn để em biết nha. Hiện tại doanh nghiệp mình đang muốn tối ưu khâu nào nhất ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-13 10:47:58.225093+00
+281	24899494746392395	{"type": "human", "content": "Abs", "additional_kwargs": {}, "response_metadata": {}}	2026-04-13 10:50:50.86806+00
+282	24899494746392395	{"type": "ai", "content": "Dạ em lại thấy chữ \\"Abs\\" nữa rồi nè. Chắc anh/chị đang bận tay chưa tiện nhắn tin dài đúng không ạ? Lúc nào rảnh, anh/chị cứ chia sẻ doanh nghiệp mình đang vướng mắc ở khâu vận hành nào để em tư vấn kỹ hơn nhé?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-13 10:50:51.036268+00
+283	24899494746392395	{"type": "human", "content": "Abs", "additional_kwargs": {}, "response_metadata": {}}	2026-04-13 10:51:53.795341+00
+284	24899494746392395	{"type": "ai", "content": "Dạ em vẫn trực tin nhắn nãy giờ đây ạ, thấy mình gõ \\"Abs\\" liên tục chắc anh/chị đang bận tay chưa tiện nhắn dài đúng không? Nếu chat bất tiện quá, anh/chị có muốn để lại SĐT để em gọi tư vấn nhanh 5 phút cho lẹ không ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-13 10:51:53.973996+00
+285	24899494746392395	{"type": "human", "content": "Abs", "additional_kwargs": {}, "response_metadata": {}}	2026-04-13 11:06:04.921065+00
+286	24899494746392395	{"type": "ai", "content": "Dạ chắc điện thoại mình đang bị cấn phím hay kẹt chữ rồi đúng không anh/chị ơi 😂. Em vẫn đang ngồi canh tin nhắn của mình nãy giờ đây ạ. Không biết dạo này việc vận hành hay chăm sóc khách hàng bên mình có đang gặp khó khăn gì không để em gỡ rối giúp nha?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-13 11:06:05.098465+00
+\.
+
+
+--
+-- Data for Name: tenant_channels; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "public"."tenant_channels" ("id", "tenant_id", "source_system", "channel", "chatwoot_account_id", "chatwoot_inbox_id", "settings_json", "created_at", "updated_at") FROM stdin;
+\.
+
+
+--
+-- Data for Name: workflow_logs; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "public"."workflow_logs" ("id", "tenant_id", "conversation_id", "workflow_name", "step_name", "status", "payload_json", "created_at") FROM stdin;
 \.
 
 
@@ -543,10 +659,24 @@ SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 1, false);
 
 
 --
+-- Name: message_buffer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('"public"."message_buffer_id_seq"', 1, false);
+
+
+--
 -- Name: n8n_chat_histories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 266, true);
+SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 286, true);
+
+
+--
+-- Name: workflow_logs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('"public"."workflow_logs_id_seq"', 1, false);
 
 
 --
@@ -560,6 +690,6 @@ SELECT pg_catalog.setval('"supabase_functions"."hooks_id_seq"', 1, false);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict TBClVsZqW0vC2IALRObGk8542pjZq5V7zVi3c4ml2uhmpiLMQgFQa2TFfGnT6eQ
+-- \unrestrict fONebTGhV1zpMRdd1SSLOZtqJmrj8IGbrQcbpwpjVOgNvRVPSe5WrFmeWdExG7g
 
 RESET ALL;
