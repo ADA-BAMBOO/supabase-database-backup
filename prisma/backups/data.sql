@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict ukNgoCjCKgGzkXzLoeXY0ONaGRKIR9fa38adxASeBDblZxdW0aZhRRHlkGDF7wv
+-- \restrict c5qPG0hpb27BMmnTlDZagjXflKghBiYufkvQn947tMheBngQ39OCi9fEfDMIa2x
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -204,6 +204,7 @@ COPY "auth"."webauthn_credentials" ("id", "user_id", "credential_id", "public_ke
 COPY "public"."messenger_onboarding_sessions" ("id", "psid", "current_step", "status", "role_code", "role_label", "industry_code", "industry_label", "pain_code", "pain_label", "company_size_code", "company_size_label", "awaiting_free_text", "awaiting_field", "skipped_steps", "answers_json", "completed_at", "created_at", "updated_at") FROM stdin;
 2ed8aea2-71b5-46c3-99e0-d9ba5f161328	24899494746392395	3	ready_for_advice	ROLE_OWNER	Chủ DN/Giám đốc	 IND_RETAIL	Bán lẻ/TMĐT	SKIPPED	Bỏ qua	\N	\N	f	\N	["S3"]	{"pain_code": "SKIPPED", "role_code": "ROLE_OWNER", "pain_label": "Bỏ qua", "role_label": "Chủ DN/Giám đốc", "industry_code": " IND_RETAIL", "industry_label": "Bán lẻ/TMĐT"}	\N	2026-04-14 12:40:27.391325+00	2026-04-15 05:19:07.663144+00
 00703c43-04c0-4d40-9377-ce0cd9968123	26842848072043208	3	ready_for_advice	ROLE_OWNER	Chủ DN/Giám đốc	 IND_TECH	Công nghệ	PAIN_SUPPORT	CSKH tốt hơn	\N	\N	f	\N	[]	{"pain_code": "PAIN_SUPPORT", "role_code": "ROLE_OWNER", "pain_label": "CSKH tốt hơn", "role_label": "Chủ DN/Giám đốc", "industry_code": " IND_TECH", "industry_label": "Công nghệ"}	\N	2026-04-14 12:53:57.16023+00	2026-04-15 08:50:12.360454+00
+ddb6d84a-7c3e-49d7-a883-0d638b6d8bcf	26068405549527719	0	in_progress	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	[]	{}	\N	2026-04-16 04:03:20.523429+00	2026-04-16 04:03:20.523429+00
 676df8e9-75ce-4248-bf95-d51c7b0f69d4	25702621409401520	1	in_progress	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	[]	{}	\N	2026-04-15 04:10:22.028072+00	2026-04-15 04:10:22.209062+00
 \.
 
@@ -721,6 +722,20 @@ COPY "public"."n8n_chat_histories" ("id", "session_id", "message", "created_at")
 506	26842848072043208	{"type": "ai", "content": "Dạ vâng, vậy em sẽ gọi qua **Zalo** cho tiện nhé!\\n\\nEm vừa gửi lời mời kết bạn từ **BBO Tech**, anh/chị đồng ý giúp em để em gửi trước thông tin chuẩn bị cho buổi khảo sát **10h sáng mai** ạ.\\n\\nAnh/chị có muốn em mời thêm cộng sự nào tham gia buổi trao đổi ngày mai không ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-15 08:58:29.224493+00
 507	26842848072043208	{"type": "human", "content": "tin nhắn khách hàng : \\"a\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-15 08:58:43.226389+00
 508	26842848072043208	{"type": "ai", "content": "Dạ vâng, vậy em sẽ trao đổi trực tiếp với anh/chị cho gọn nhé. \\n\\nBuổi **10h sáng mai**, em sẽ tập trung khảo sát **hành trình khách hàng** thực tế để đề xuất giải pháp **tự động hóa** sát nhất. Em sẽ nhắn tin nhắc lịch qua Zalo trước 30 phút.\\n\\n**Anh/chị có cần em gửi trước tài liệu** giới thiệu giải pháp để xem qua không ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-15 08:58:43.389447+00
+509	24899494746392395	{"type": "human", "content": "tin nhắn khách hàng : \\"Ê\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-16 03:38:21.629943+00
+510	24899494746392395	{"type": "ai", "content": "Dạ BBO Tech nghe đây ạ! Nếu anh/chị muốn **bỏ qua** các khâu thủ công, em sẽ setup hệ thống **tự động nhắc lịch** và chăm sóc khách trên Telegram/Facebook.\\n\\nAnh/chị sẽ **sở hữu 100% dữ liệu** và thấu hiểu hành trình khách hơn. Anh/chị cho em xin **SĐT** để em gọi tư vấn kỹ hơn cho shop mình nhé?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-16 03:38:21.801315+00
+511	24899494746392395	{"type": "human", "content": "tin nhắn khách hàng : \\"Alo\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-16 03:51:23.474596+00
+512	24899494746392395	{"type": "ai", "content": "Dạ BBO Tech nghe đây ạ! Em có thể giúp anh/chị xây dựng **hệ thống đặt lịch** và **chăm sóc tự động** trên Telegram/Facebook để tăng tỷ lệ quay lại của khách. \\n\\nAnh/chị sẽ **sở hữu 100% dữ liệu** trên server riêng. Không biết shop mình đang cần **tự động hóa** ở khâu nào nhất ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-16 03:51:23.644467+00
+513	24899494746392395	{"type": "human", "content": "tin nhắn khách hàng : \\"Ê\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-16 03:51:42.735198+00
+514	24899494746392395	{"type": "ai", "content": "Dạ em là chuyên viên BBOTech đây ạ! Nếu anh/chị muốn **bỏ qua** các khâu thủ công, em sẽ setup hệ thống **tự động nhắc lịch/chăm sóc** trên Telegram/Facebook. \\n\\nHệ thống giúp anh/chị **thấu hiểu hành trình khách** và sở hữu 100% dữ liệu trên server riêng. Anh/chị cho em xin **SĐT** để em gọi tư vấn kỹ hơn nhé?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-16 03:51:42.902826+00
+515	24899494746392395	{"type": "human", "content": "tin nhắn khách hàng : \\"Không thích\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-16 03:52:05.540801+00
+516	24899494746392395	{"type": "ai", "content": "Em hiểu ạ! BBOTech không dùng mẫu có sẵn mà sẽ **khảo sát thực tế** để xây dựng giải pháp **đúng ý anh/chị** nhất. \\n\\nBên em đồng hành **vận hành và bảo trì** lâu dài trên server riêng của mình, không \\"làm xong bỏ đấy\\". Anh/chị đang ngại **phần nào phức tạp** hay chưa phù hợp với shop mình ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-16 03:52:05.708095+00
+517	26068405549527719	{"type": "human", "content": "tin nhắn khách hàng : \\"CHầu Cạu\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-16 04:03:30.951192+00
+518	26068405549527719	{"type": "ai", "content": "Dạ em chào anh/chị, em là chuyên viên **BBOTech**. \\n\\nNếu mình đang muốn tối ưu vận hành, bên em có thể giúp anh/chị xây dựng **hệ thống đặt lịch** hoặc **nhắc lịch tự động** qua Telegram/Facebook. BBOTech sẽ **setup và vận hành** trực tiếp trên server riêng của mình để anh/chị làm chủ 100% dữ liệu. \\n\\nKhông biết anh/chị đang quan tâm khâu nào nhất ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-16 04:03:31.114208+00
+519	26068405549527719	{"type": "human", "content": "tin nhắn khách hàng : \\"ụa bạn là gì vậy??\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-16 04:03:42.518655+00
+520	26068405549527719	{"type": "ai", "content": "BBO Tech là **đối tác công nghệ dài hạn** chuyên giúp anh/chị **tự động hóa** quy trình vận hành và chăm sóc khách hàng. \\n\\nBên em sẽ trực tiếp **setup, vận hành và bảo trì** các hệ thống như Chatbot, Website, Email Marketing trên chính server riêng của anh/chị. \\n\\nAnh/chị đang muốn tối ưu khâu **tương tác** hay **quản lý dữ liệu** học viên/khách hàng nhất ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-16 04:03:42.682552+00
+521	26068405549527719	{"type": "human", "content": "tin nhắn khách hàng : \\"tôi muốn học toán cao cấp thì sao??\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-16 04:04:14.433213+00
+522	26068405549527719	{"type": "ai", "content": "Dạ, **BBOTech** không trực tiếp dạy học, nhưng bên em chuyên giúp các đơn vị giáo dục xây dựng **hệ thống bài giảng** và **tự động hóa chăm sóc học viên**. \\n\\nNếu anh/chị dự định mở lớp, bên em sẽ hỗ trợ **setup vận hành** chatbot nhắc lịch học trên server riêng để quản lý dữ liệu hiệu quả.\\n\\nAnh/chị đang tìm khóa học hay muốn xây dựng hệ thống quản lý dạy học ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-16 04:04:14.597053+00
 \.
 
 
@@ -799,7 +814,7 @@ SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 1, false);
 -- Name: n8n_chat_histories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 508, true);
+SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 522, true);
 
 
 --
@@ -813,6 +828,6 @@ SELECT pg_catalog.setval('"supabase_functions"."hooks_id_seq"', 1, false);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict ukNgoCjCKgGzkXzLoeXY0ONaGRKIR9fa38adxASeBDblZxdW0aZhRRHlkGDF7wv
+-- \unrestrict c5qPG0hpb27BMmnTlDZagjXflKghBiYufkvQn947tMheBngQ39OCi9fEfDMIa2x
 
 RESET ALL;
