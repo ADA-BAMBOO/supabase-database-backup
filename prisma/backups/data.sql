@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict GB222SgpcOGgBlTMLqmfpze7Jfj3wXxw8pSBbl8DotIXx9qKidOzXqs3iMqKV5J
+-- \restrict lgjt8wj5K9HvF3FjdOGUH5SPaHmJscnt6KtTEcaKzTJ88hNiRo1Hp86BaBuqLOZ
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -736,6 +736,8 @@ COPY "public"."n8n_chat_histories" ("id", "session_id", "message", "created_at")
 520	26068405549527719	{"type": "ai", "content": "BBO Tech là **đối tác công nghệ dài hạn** chuyên giúp anh/chị **tự động hóa** quy trình vận hành và chăm sóc khách hàng. \\n\\nBên em sẽ trực tiếp **setup, vận hành và bảo trì** các hệ thống như Chatbot, Website, Email Marketing trên chính server riêng của anh/chị. \\n\\nAnh/chị đang muốn tối ưu khâu **tương tác** hay **quản lý dữ liệu** học viên/khách hàng nhất ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-16 04:03:42.682552+00
 521	26068405549527719	{"type": "human", "content": "tin nhắn khách hàng : \\"tôi muốn học toán cao cấp thì sao??\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-16 04:04:14.433213+00
 522	26068405549527719	{"type": "ai", "content": "Dạ, **BBOTech** không trực tiếp dạy học, nhưng bên em chuyên giúp các đơn vị giáo dục xây dựng **hệ thống bài giảng** và **tự động hóa chăm sóc học viên**. \\n\\nNếu anh/chị dự định mở lớp, bên em sẽ hỗ trợ **setup vận hành** chatbot nhắc lịch học trên server riêng để quản lý dữ liệu hiệu quả.\\n\\nAnh/chị đang tìm khóa học hay muốn xây dựng hệ thống quản lý dạy học ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-16 04:04:14.597053+00
+523	24899494746392395	{"type": "human", "content": "tin nhắn khách hàng : \\"Alo\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-18 02:48:55.439773+00
+524	24899494746392395	{"type": "ai", "content": "Dạ em là chuyên viên BBO Tech đây ạ! Với mảng bán lẻ, bên em sẽ giúp anh/chị **tự động hóa** khâu nhắc lịch và chăm sóc khách qua Telegram/Facebook để tối ưu **mối quan hệ lâu dài**. \\n\\nAnh/chị sẽ **sở hữu 100% dữ liệu** trên server riêng để thấu hiểu khách hàng hơn. Anh/chị cho em xin **SĐT** để em gọi tư vấn cụ thể nhé?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-18 02:48:55.607224+00
 \.
 
 
@@ -814,7 +816,7 @@ SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 1, false);
 -- Name: n8n_chat_histories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 522, true);
+SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 524, true);
 
 
 --
@@ -828,6 +830,6 @@ SELECT pg_catalog.setval('"supabase_functions"."hooks_id_seq"', 1, false);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict GB222SgpcOGgBlTMLqmfpze7Jfj3wXxw8pSBbl8DotIXx9qKidOzXqs3iMqKV5J
+-- \unrestrict lgjt8wj5K9HvF3FjdOGUH5SPaHmJscnt6KtTEcaKzTJ88hNiRo1Hp86BaBuqLOZ
 
 RESET ALL;
