@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict bYZZaScUR6lj8CwWXDfFpGjdkR6R0fWQnmdTfOUegwWWQnAs14xGe5n2GHimDFP
+-- \restrict Bfunbhny9sjA46PD9IhSLGSpbai5tBOB1y1syhALcmkQK8d0UQwAf9TP6XPEKPa
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -775,6 +775,12 @@ COPY "public"."n8n_chat_histories" ("id", "session_id", "message", "created_at")
 558	26677914571874206	{"type": "ai", "content": "Dạ, em đã ghi nhận email **lqtrung.ada@gmail.com** của anh/chị. Em sẽ gửi lời mời Google Meet kèm **nội dung trao đổi dự kiến** ngay bây giờ ạ. \\n\\nAnh/chị vui lòng kiểm tra hộp thư (và cả mục spam) giúp em nhé. Trong buổi demo mai, anh/chị muốn em tập trung vào **giải pháp đặt lịch** hay **quy trình nhắc lịch** khách hàng hơn ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-22 12:52:31.316656+00
 559	26677914571874206	{"type": "human", "content": "tin nhắn khách hàng : \\"Tôi ko quam tâm\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-22 12:53:15.524891+00
 560	26677914571874206	{"type": "ai", "content": "Dạ em hiểu ạ. BBO Tech xin phép **tạm dừng lịch hẹn** để không làm phiền anh/chị lúc này. \\n\\nSau này nếu cần **tối ưu vận hành** hay muốn **giảm tải cho nhân sự** phòng khám, anh/chị cứ nhắn em nhé. \\n\\nKhông biết anh/chị đang thấy giải pháp này **chưa phù hợp** ở điểm nào để em rút kinh nghiệm ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-22 12:53:15.698579+00
+561	25	{"type": "human", "content": "<p>Người yêu của Hưng tên gì?</p>\\n", "additional_kwargs": {}, "response_metadata": {}}	2026-04-23 10:41:28.775279+00
+562	25	{"type": "ai", "content": "Dạ câu này thì nằm ngoài dữ liệu của em mất rồi 😂 Em chỉ rành về việc setup và vận hành các hệ thống công nghệ cho doanh nghiệp thôi ạ. \\n\\nKhông biết anh/chị đang tìm hiểu giải pháp phần mềm nào cho công ty, hay chỉ đang đi dạo quanh thôi ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-23 10:41:28.960499+00
+563	26677914571874206	{"type": "human", "content": "tin nhắn khách hàng : \\"Chào bạn, bạn có nhớ tôi ko\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-23 11:21:25.289641+00
+564	26677914571874206	{"type": "ai", "content": "Dạ BBO Tech luôn **trân trọng và nhớ** từng anh/chị đã quan tâm đến giải pháp bên em ạ. Em vẫn lưu thông tin về mong muốn **tối ưu vận hành** phòng khám của mình.\\n\\nHiện bên em có hệ thống **nhắc lịch tự động** trên Telegram giúp thấu hiểu hành trình khách hàng rất hiệu quả. Anh/chị có muốn xem thử **bản demo** này không ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-23 11:21:25.455003+00
+565	26677914571874206	{"type": "human", "content": "tin nhắn khách hàng : \\"Muốn\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-23 11:22:00.476217+00
+566	26677914571874206	{"type": "ai", "content": "Dạ tuyệt vời ạ! Hệ thống của BBO Tech giúp tự động **nhắc lịch và chăm sóc** khách hàng từ Facebook, Telegram về một đầu mối duy nhất, giúp anh/chị không bỏ sót ai.\\n\\nEm có thể gửi **link trải nghiệm trực tiếp** hoặc mình gọi nhanh 5 phút để em **share màn hình demo** thực tế không ạ? \\n\\nAnh/chị thấy phương án nào **thuận tiện nhất** cho mình ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-23 11:22:00.652777+00
 \.
 
 
@@ -853,7 +859,7 @@ SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 1, false);
 -- Name: n8n_chat_histories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 560, true);
+SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 566, true);
 
 
 --
@@ -867,6 +873,6 @@ SELECT pg_catalog.setval('"supabase_functions"."hooks_id_seq"', 1, false);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict bYZZaScUR6lj8CwWXDfFpGjdkR6R0fWQnmdTfOUegwWWQnAs14xGe5n2GHimDFP
+-- \unrestrict Bfunbhny9sjA46PD9IhSLGSpbai5tBOB1y1syhALcmkQK8d0UQwAf9TP6XPEKPa
 
 RESET ALL;
