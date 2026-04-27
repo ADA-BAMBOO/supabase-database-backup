@@ -31,13 +31,6 @@ CREATE EXTENSION IF NOT EXISTS "citext" WITH SCHEMA "public";
 
 
 
-CREATE EXTENSION IF NOT EXISTS "pg_graphql" WITH SCHEMA "graphql";
-
-
-
-
-
-
 CREATE EXTENSION IF NOT EXISTS "pg_stat_statements" WITH SCHEMA "extensions";
 
 
@@ -258,9 +251,6 @@ GRANT ALL ON FUNCTION "public"."citext"("inet") TO "postgres";
 GRANT ALL ON FUNCTION "public"."citext"("inet") TO "anon";
 GRANT ALL ON FUNCTION "public"."citext"("inet") TO "authenticated";
 GRANT ALL ON FUNCTION "public"."citext"("inet") TO "service_role";
-
-
-
 
 
 
