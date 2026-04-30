@@ -575,6 +575,11 @@ ALTER TABLE ONLY "public"."handoff_rules"
 
 
 ALTER TABLE ONLY "public"."leads"
+    ADD CONSTRAINT "leads_conversation_id_unique" UNIQUE ("conversation_id");
+
+
+
+ALTER TABLE ONLY "public"."leads"
     ADD CONSTRAINT "leads_pkey" PRIMARY KEY ("id");
 
 
