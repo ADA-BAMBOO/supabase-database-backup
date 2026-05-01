@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict EHg5GKiycxlxHG0oAD9zafMTF0dh9Y88AQRQp6chz3lcHHUGuse44joH7pdN1Ho
+-- \restrict 8mPrmTkGw5sgkfQ6PRgTaGT07RVSYeBxNf84R8uqw4GL1mL9tdMZefbq14Hylwk
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -505,6 +505,7 @@ COPY "public"."messenger_onboarding_sessions" ("id", "psid", "current_step", "st
 00703c43-04c0-4d40-9377-ce0cd9968123	26842848072043208	3	ready_for_advice	ROLE_OWNER	Chủ DN/Giám đốc	 IND_TECH	Công nghệ	PAIN_SUPPORT	CSKH tốt hơn	\N	\N	f	\N	[]	{"pain_code": "PAIN_SUPPORT", "role_code": "ROLE_OWNER", "pain_label": "CSKH tốt hơn", "role_label": "Chủ DN/Giám đốc", "industry_code": " IND_TECH", "industry_label": "Công nghệ"}	\N	2026-04-14 12:53:57.16023+00	2026-04-15 08:50:12.360454+00
 ddb6d84a-7c3e-49d7-a883-0d638b6d8bcf	26068405549527719	0	in_progress	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	[]	{}	\N	2026-04-16 04:03:20.523429+00	2026-04-16 04:03:20.523429+00
 ef279240-8565-4491-b65e-f50d81a13963	26677914571874206	0	in_progress	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	[]	{}	\N	2026-04-22 12:30:32.918041+00	2026-04-22 12:30:32.918041+00
+d959ce87-f642-48d7-ad92-4744567e7ada	26238690265753057	0	in_progress	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	[]	{}	\N	2026-04-30 07:18:53.141882+00	2026-04-30 07:18:53.141882+00
 676df8e9-75ce-4248-bf95-d51c7b0f69d4	25702621409401520	1	in_progress	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	[]	{}	\N	2026-04-15 04:10:22.028072+00	2026-04-15 04:10:22.209062+00
 \.
 
@@ -944,6 +945,7 @@ COPY "public"."n8n_chat_histories" ("id", "session_id", "message", "created_at")
 425	25702621409401520	{"type": "human", "content": "Hãy viết một tin nhắn tư vấn cho khách hàng thuộc ngành doanh nghiệp, với vai trò là Khách hàng, đang quan tâm đến mục tiêu \\"Chưa rõ nhu cầu\\". nội dung tin : \\"Tôi đang muốn chăm sóc khách hàng mới\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-15 04:13:07.57141+00
 426	25702621409401520	{"type": "ai", "content": "Để chăm sóc khách hàng mới hiệu quả, BBO Tech giúp Khách hàng thiết lập luồng phản hồi tức thì ngay khi họ vừa nhắn tin, giúp tăng tỷ lệ chuyển đổi rõ rệt. Hệ thống có thể tự động tư vấn sản phẩm, thu thập thông tin lead hoặc hỗ trợ đặt lịch hẹn 24/7 ngay trên Facebook và Zalo.\\n\\nMọi kịch bản đều được xây dựng dựa trên quy trình thực tế của bên mình, giúp Khách hàng thấu hiểu hành trình của học viên/khách hàng ngay từ điểm chạm đầu tiên. Khách hàng muốn chatbot tập trung vào việc gửi báo giá tự động hay hỗ trợ khách đặt lịch hẹn tư vấn trước ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-15 04:13:07.734059+00
 427	25702621409401520	{"type": "human", "content": "Hãy viết một tin nhắn tư vấn cho khách hàng thuộc ngành doanh nghiệp, với vai trò là Khách hàng, đang quan tâm đến mục tiêu \\"Chưa rõ nhu cầu\\". nội dung tin : \\"Tôi đang làm trong lĩnh vực spa\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-15 04:13:18.227074+00
+575	26238690265753057	{"type": "human", "content": "tin nhắn khách hàng : \\"BBOTech đang cung cấp dịch vụ gì?\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-30 07:37:29.630462+00
 428	25702621409401520	{"type": "ai", "content": "Với đặc thù ngành Spa, BBO Tech có thể giúp Khách hàng tự động hóa khâu đặt lịch và nhắc hẹn để giảm tình trạng khách quên lịch. Ngoài ra, hệ thống nhắc lịch/chăm sóc sau dịch vụ trên Telegram/Facebook sẽ giúp mình thấu hiểu cảm nhận của khách để cải thiện dịch vụ và giữ chân họ lâu dài.\\n\\nBên em sẽ đồng hành vận hành cùng Khách hàng trên server riêng để đảm bảo dữ liệu khách hàng spa của mình được bảo mật tuyệt đối. Hiện tại Khách hàng đang gặp khó khăn ở khâu khách đặt lịch hay khâu chăm sóc sau khi họ đã sử dụng dịch vụ xong ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-15 04:13:18.390571+00
 429	25702621409401520	{"type": "human", "content": "Hãy viết một tin nhắn tư vấn cho khách hàng thuộc ngành doanh nghiệp, với vai trò là Khách hàng, đang quan tâm đến mục tiêu \\"Chưa rõ nhu cầu\\". nội dung tin : \\"Alo ad ơi\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-15 04:14:57.654861+00
 430	25702621409401520	{"type": "ai", "content": "Dạ em chào Khách hàng, em là chuyên viên từ BBO Tech đây ạ. Bên em chuyên đồng hành cùng các đơn vị Dịch vụ/Giáo dục để xây dựng hệ thống chăm sóc và thấu hiểu hành trình khách hàng một cách tự động. \\n\\nNếu mình chưa rõ bắt đầu từ đâu, Khách hàng có thể tham khảo giải pháp đặt lịch hoặc nhắc lịch tự động trên Facebook/Telegram để tối ưu vận hành trước ạ. Không biết hiện tại mình đang quản lý thông tin khách hàng qua file Excel hay có dùng phần mềm nào chưa ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-15 04:14:57.818552+00
@@ -1080,6 +1082,15 @@ COPY "public"."n8n_chat_histories" ("id", "session_id", "message", "created_at")
 564	26677914571874206	{"type": "ai", "content": "Dạ BBO Tech luôn **trân trọng và nhớ** từng anh/chị đã quan tâm đến giải pháp bên em ạ. Em vẫn lưu thông tin về mong muốn **tối ưu vận hành** phòng khám của mình.\\n\\nHiện bên em có hệ thống **nhắc lịch tự động** trên Telegram giúp thấu hiểu hành trình khách hàng rất hiệu quả. Anh/chị có muốn xem thử **bản demo** này không ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-23 11:21:25.455003+00
 565	26677914571874206	{"type": "human", "content": "tin nhắn khách hàng : \\"Muốn\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-23 11:22:00.476217+00
 566	26677914571874206	{"type": "ai", "content": "Dạ tuyệt vời ạ! Hệ thống của BBO Tech giúp tự động **nhắc lịch và chăm sóc** khách hàng từ Facebook, Telegram về một đầu mối duy nhất, giúp anh/chị không bỏ sót ai.\\n\\nEm có thể gửi **link trải nghiệm trực tiếp** hoặc mình gọi nhanh 5 phút để em **share màn hình demo** thực tế không ạ? \\n\\nAnh/chị thấy phương án nào **thuận tiện nhất** cho mình ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-23 11:22:00.652777+00
+567	26238690265753057	{"type": "human", "content": "tin nhắn khách hàng : \\"hi\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-30 07:21:44.262545+00
+568	26238690265753057	{"type": "ai", "content": "Chào anh/chị, em là chuyên viên BBO Tech. Bên em chuyên hỗ trợ các đơn vị dịch vụ xây dựng hệ thống nhắc lịch và chăm sóc tự động trên Telegram/Facebook. Giải pháp này giúp anh/chị thấu hiểu hành trình khách hàng và tối ưu chất lượng phục vụ mà không lo về kỹ thuật.\\n\\nKhông biết anh/chị đang quan tâm đến việc tự động hóa lịch hẹn hay chăm sóc khách hàng sau dịch vụ ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-30 07:21:44.455193+00
+569	26238690265753057	{"type": "human", "content": "tin nhắn khách hàng : \\"hi\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-30 07:26:22.883364+00
+570	26238690265753057	{"type": "ai", "content": "Chào anh/chị, em là chuyên viên BBO Tech. Bên em chuyên hỗ trợ các đơn vị Dịch vụ/Giáo dục xây dựng hệ thống đặt lịch và nhắc lịch tự động trên Telegram/Facebook. Giải pháp này giúp anh/chị thấu hiểu hành trình khách hàng để chăm sóc tốt hơn mà không cần lo về kỹ thuật.\\n\\nAnh/chị đang muốn tối ưu quy trình đặt lịch hay chăm sóc tự động ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-30 07:26:23.066984+00
+571	26238690265753057	{"type": "human", "content": "tin nhắn khách hàng : \\"hi\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-30 07:26:34.476156+00
+572	26238690265753057	{"type": "ai", "content": "Chào anh/chị, em là chuyên viên BBO Tech. Bên em hỗ trợ các đơn vị Dịch vụ/Giáo dục xây dựng hệ thống đặt lịch và chăm sóc tự động trên Telegram/Facebook để thấu hiểu hành trình khách hàng.\\n\\nBBO Tech sẽ setup và vận hành trên server riêng để anh/chị sở hữu 100% dữ liệu. Anh/chị đang cần tối ưu lịch hẹn hay nhắc lịch tự động ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-30 07:26:34.640343+00
+573	26238690265753057	{"type": "human", "content": "tin nhắn khách hàng : \\"tôi muốn kết nối\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-30 07:26:45.889004+00
+574	26238690265753057	{"type": "ai", "content": "Chào anh/chị, em là chuyên viên BBO Tech. Rất vui được kết nối với anh/chị! Bên em sẽ đồng hành dài hạn để giúp anh/chị xây dựng hệ thống đặt lịch và chăm sóc tự động, giúp tối ưu vận hành mà không lo về kỹ thuật.\\n\\nĐể hỗ trợ tốt nhất, em có thể xin SĐT hoặc mời anh/chị một buổi meeting ngắn không ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-30 07:26:46.05711+00
+576	26238690265753057	{"type": "ai", "content": "BBO Tech cung cấp giải pháp công nghệ bám sát vận hành gồm:\\n- Chatbot đa nền tảng (đặt lịch, nhắc hẹn tự động).\\n- Website và Email Marketing chăm sóc khách hàng bài bản.\\n- Hạ tầng máy chủ riêng, giúp anh/chị sở hữu 100% dữ liệu.\\n\\nBên em sẽ trực tiếp setup và bảo trì hằng tháng. Anh/chị đang cần tối ưu mảng nào nhất ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-30 07:37:29.802852+00
 \.
 
 
@@ -1158,7 +1169,7 @@ SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 1, false);
 -- Name: n8n_chat_histories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 566, true);
+SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 576, true);
 
 
 --
@@ -1172,6 +1183,6 @@ SELECT pg_catalog.setval('"supabase_functions"."hooks_id_seq"', 1, false);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict EHg5GKiycxlxHG0oAD9zafMTF0dh9Y88AQRQp6chz3lcHHUGuse44joH7pdN1Ho
+-- \unrestrict 8mPrmTkGw5sgkfQ6PRgTaGT07RVSYeBxNf84R8uqw4GL1mL9tdMZefbq14Hylwk
 
 RESET ALL;
