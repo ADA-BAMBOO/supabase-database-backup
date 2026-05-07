@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict amTfjG1TqSyXm2dwk9CzPetCjLNNgqtsnqd7giosg4fXI2V23WPzab66E3NX2KM
+-- \restrict EcxdhIQ3rCa34BxhxdhYXatIFUV26APTgUzMiDdzAf5InTRFYGaadsNFyKixDsC
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -1091,6 +1091,8 @@ COPY "public"."n8n_chat_histories" ("id", "session_id", "message", "created_at")
 573	26238690265753057	{"type": "human", "content": "tin nhắn khách hàng : \\"tôi muốn kết nối\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-04-30 07:26:45.889004+00
 574	26238690265753057	{"type": "ai", "content": "Chào anh/chị, em là chuyên viên BBO Tech. Rất vui được kết nối với anh/chị! Bên em sẽ đồng hành dài hạn để giúp anh/chị xây dựng hệ thống đặt lịch và chăm sóc tự động, giúp tối ưu vận hành mà không lo về kỹ thuật.\\n\\nĐể hỗ trợ tốt nhất, em có thể xin SĐT hoặc mời anh/chị một buổi meeting ngắn không ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-30 07:26:46.05711+00
 576	26238690265753057	{"type": "ai", "content": "BBO Tech cung cấp giải pháp công nghệ bám sát vận hành gồm:\\n- Chatbot đa nền tảng (đặt lịch, nhắc hẹn tự động).\\n- Website và Email Marketing chăm sóc khách hàng bài bản.\\n- Hạ tầng máy chủ riêng, giúp anh/chị sở hữu 100% dữ liệu.\\n\\nBên em sẽ trực tiếp setup và bảo trì hằng tháng. Anh/chị đang cần tối ưu mảng nào nhất ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-04-30 07:37:29.802852+00
+577	38	{"type": "human", "content": "<p>hello</p>\\n", "additional_kwargs": {}, "response_metadata": {}}	2026-05-06 09:17:31.905+00
+578	38	{"type": "ai", "content": "Dạ em chào anh/chị, em là chuyên viên tư vấn của BBOTech đây ạ. Không biết hiện tại doanh nghiệp mình đang cần hỗ trợ mảng công nghệ hay đang gặp khó khăn gì trong quá trình vận hành không anh/chị nhỉ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-05-06 09:17:32.08176+00
 \.
 
 
@@ -1169,7 +1171,7 @@ SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 1, false);
 -- Name: n8n_chat_histories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 576, true);
+SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 578, true);
 
 
 --
@@ -1183,6 +1185,6 @@ SELECT pg_catalog.setval('"supabase_functions"."hooks_id_seq"', 1, false);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict amTfjG1TqSyXm2dwk9CzPetCjLNNgqtsnqd7giosg4fXI2V23WPzab66E3NX2KM
+-- \unrestrict EcxdhIQ3rCa34BxhxdhYXatIFUV26APTgUzMiDdzAf5InTRFYGaadsNFyKixDsC
 
 RESET ALL;
