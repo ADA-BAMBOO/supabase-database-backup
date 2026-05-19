@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict UckKwPxqeRYb5HMA1DRIMWQvg29kyAt6u3w771QXu82JxXPkGFA88gjDBgQZr18
+-- \restrict UqdyyeW6jlUi1QibVKoaTCvYukNjbSAka6C0zCBFVOIR5OFOjeb8uEvsn6n2nWt
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -507,6 +507,7 @@ ddb6d84a-7c3e-49d7-a883-0d638b6d8bcf	26068405549527719	0	in_progress	\N	\N	\N	\N
 ef279240-8565-4491-b65e-f50d81a13963	26677914571874206	0	in_progress	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	[]	{}	\N	2026-04-22 12:30:32.918041+00	2026-04-22 12:30:32.918041+00
 d959ce87-f642-48d7-ad92-4744567e7ada	26238690265753057	0	in_progress	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	[]	{}	\N	2026-04-30 07:18:53.141882+00	2026-04-30 07:18:53.141882+00
 1073bfc7-482b-4e57-be69-99e2b0edf171	35608292025484476	0	in_progress	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	[]	{}	\N	2026-05-17 10:10:45.20794+00	2026-05-17 10:10:45.20794+00
+9827687d-c200-4d30-9651-0540664a630a	35584246371219596	0	in_progress	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	[]	{}	\N	2026-05-18 08:19:38.870909+00	2026-05-18 08:19:38.870909+00
 676df8e9-75ce-4248-bf95-d51c7b0f69d4	25702621409401520	1	in_progress	\N	\N	\N	\N	\N	\N	\N	\N	f	\N	[]	{}	\N	2026-04-15 04:10:22.028072+00	2026-04-15 04:10:22.209062+00
 \.
 
@@ -1098,6 +1099,8 @@ COPY "public"."n8n_chat_histories" ("id", "session_id", "message", "created_at")
 580	35608292025484476	{"type": "ai", "content": "Chào anh/chị, em là chuyên viên BBOTech. Bên em đồng hành dài hạn cùng các đơn vị giáo dục, dịch vụ để xây dựng hệ thống đặt lịch và nhắc lịch tự động trên Telegram/Facebook. \\n\\nAnh/chị sẽ sở hữu 100% dữ liệu để thấu hiểu hành trình khách hàng và cải thiện chất lượng phục vụ tốt hơn. Anh/chị đang muốn tự động hóa khâu nào nhất ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-05-17 10:10:54.939896+00
 581	35608292025484476	{"type": "human", "content": "tin nhắn khách hàng : \\"báo giá dịch vụ làm web bên mình với ạ\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-05-17 10:11:06.936347+00
 582	35608292025484476	{"type": "ai", "content": "Dạ, BBO Tech không dùng bảng giá chung vì mỗi website được tùy chỉnh riêng để anh/chị chỉ trả cho tính năng cần dùng. Bên em sẽ đồng hành từ khâu setup đến vận hành trên server riêng của anh/chị.\\n\\nAnh/chị có tiện để lại SĐT hoặc mình hẹn một buổi trao đổi ngắn để em báo giá sát nhất không ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-05-17 10:11:07.101859+00
+583	35584246371219596	{"type": "human", "content": "tin nhắn khách hàng : \\"BBOTech đang cung cấp dịch vụ gì?\\"", "additional_kwargs": {}, "response_metadata": {}}	2026-05-18 08:19:49.068083+00
+584	35584246371219596	{"type": "ai", "content": "Chào anh/chị, em là chuyên viên BBO Tech. Bên em chuyên tư vấn và vận hành các hệ thống tự động như chatbot đặt lịch, nhắc lịch qua Telegram/Facebook giúp tối ưu hành trình khách hàng.\\n\\nBBO Tech sẽ đồng hành dài hạn, bảo trì và giúp anh/chị sở hữu 100% dữ liệu. Anh/chị đang muốn tối ưu khâu đón tiếp hay chăm sóc khách hàng cũ ạ?", "tool_calls": [], "additional_kwargs": {}, "response_metadata": {}, "invalid_tool_calls": []}	2026-05-18 08:19:49.253557+00
 \.
 
 
@@ -1176,7 +1179,7 @@ SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 1, false);
 -- Name: n8n_chat_histories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 582, true);
+SELECT pg_catalog.setval('"public"."n8n_chat_histories_id_seq"', 584, true);
 
 
 --
@@ -1190,6 +1193,6 @@ SELECT pg_catalog.setval('"supabase_functions"."hooks_id_seq"', 1, false);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict UckKwPxqeRYb5HMA1DRIMWQvg29kyAt6u3w771QXu82JxXPkGFA88gjDBgQZr18
+-- \unrestrict UqdyyeW6jlUi1QibVKoaTCvYukNjbSAka6C0zCBFVOIR5OFOjeb8uEvsn6n2nWt
 
 RESET ALL;
